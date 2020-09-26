@@ -52,7 +52,6 @@ public class CalFactors {
 	private void executePrimeFactRR(int n, int m) {
 
 		if (isPrimeNum(n)) {
-			// System.out.println(n);
 			pflist.add(n);
 		} else if (n % m == 0) {
 			executePrimeFactRR(m, m - 1);
@@ -99,10 +98,8 @@ public class CalFactors {
 
 		boolean result = false;
 		for (int f : thelist) {
-			if (Arrays.asList(s).contains(f)) {
-				result = true;
-			} else {
-				result = false;
+			result = Arrays.asList(s).contains(f);
+			if (!result){
 				break;
 			}
 		}
